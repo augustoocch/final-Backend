@@ -152,7 +152,7 @@ public class ServletControlador extends HttpServlet{
             
         }
     
-        //Creamos objeto de cliente
+        //Modificar objeto de cliente
         Cliente cliente = new Cliente(idCliente, nombre, apellido, email, telefono, saldo);
     
         //Se inserta
@@ -171,7 +171,7 @@ public class ServletControlador extends HttpServlet{
         //Recuperamos valores del formulario
         int idCliente = Integer.parseInt(request.getParameter("idCliente"));
         
-        //Creamos un objeto
+        //Eliminar un objeto
         
         Cliente cliente = new Cliente(idCliente);
         int registroModificado = new ClienteDaoJDBC().eliminar(cliente);
